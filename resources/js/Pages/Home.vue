@@ -26,15 +26,15 @@
                 
                 <div class="mb-4">
                     <label class="block text-gray-500 font-bold mb-2" for="year">Ange år</label>
-                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" id="year" name="year" placeholder="1937">
+                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" id="year" name="year" :placeholder="holidayClosed.year">
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-500 font-bold mb-2" for="startWeek">Från och med vecka</label>
-                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" id="startWeek" name="startWeek" placeholder="26">
+                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" id="startWeek" name="startWeek" :placeholder="holidayClosed.startWeek">
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-500 font-bold mb-2" for="endWeek">Till och med vecka</label>
-                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" id="endWeek" name="endWeek" placeholder="29">
+                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" id="endWeek" name="endWeek" :placeholder="holidayClosed.endWeek">
                 </div>
                 <div class="flex items-center justify-between">
                     <input type="submit" value="Ändra" class="btn-add rounded px-5 py-2 focus:outline-none focus:shadow-outline"> 
@@ -46,15 +46,15 @@
     <div class="container mx-auto">
         <div class="flex flex-col justify-between md:flex-row">
             <div class="text-center p-5">
-                <h2 class="text-xl text-gray-900 font-semibold md:text-2xl">Semesterstängt 2021</h2>
-                <h4 class="text-xl">Vecka 26-29</h4>
+                <h2 class="text-xl text-gray-900 font-semibold md:text-2xl">Semesterstängt {{ holidayClosed.year }}</h2>
+                <h4 class="text-xl">Vecka {{ holidayClosed.startWeek }}-{{ holidayClosed.endWeek }}</h4>
                 <p class="bp-2">
                     Vid akuta ärenden kontakta 
                     <inertia-link :href="route('home')" class="text-blue-900 hover:underline focus:underline">
                         styrelsen
                     </inertia-link>
                 </p>
-                <button @click="openModal = !openModal" class="rounded bg-green-500 text-white px-5 py-2 shadow hover:bg-green-600 focus:bg-green-600">Ändra</button>
+                <button v-if="$page.props.auth.user" @click="openModal = !openModal" class="rounded bg-green-500 text-white px-5 py-2 shadow hover:bg-green-600 focus:bg-green-600">Ändra</button>
             </div>
 
             <div class="text-center p-5">
@@ -91,6 +91,7 @@ import homeLayout from '@/Layouts/HomeLayout.vue'
 import { ref } from '@vue/reactivity'
 import { onUpdated, watch } from '@vue/runtime-core'
 export default {
+    props: ['holidayClosed'],
     components: {
         homeLayout
     },

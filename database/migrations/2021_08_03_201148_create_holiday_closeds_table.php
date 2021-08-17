@@ -14,8 +14,10 @@ class CreateHolidayClosedsTable extends Migration
     public function up()
     {
         Schema::create('holiday_closeds', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id()->autoIncrement();
+            $table->year('year');
+            $table->unsignedTinyInteger('startWeek');
+            $table->unsignedTinyInteger('endWeek');
         });
     }
 

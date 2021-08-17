@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HolidayClosedController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,9 +25,8 @@ Route::get('/welcome', function () {
     ]);
 });
 
-Route::get('/', function () {
-    return Inertia::render('Home');
-})->name('home');
+Route::get('/', [HolidayClosedController::class, 'getHolidayClosed'])
+    ->name('home');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
