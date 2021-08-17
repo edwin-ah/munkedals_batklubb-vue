@@ -22,22 +22,26 @@
             <button @click="openModal = !openModal" class="float-right text-gray-700 text-xl font-bold bg-white mr-4 hover:text-black focus:text-black">
                 <span>&times;</span>
             </button>
-            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 form-edit-closed">
+
+            <form @submit.prevent="submit" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 form-edit-closed">
                 
                 <div class="mb-4">
                     <label class="block text-gray-500 font-bold mb-2" for="year">Ange år</label>
-                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" id="year" name="year" :placeholder="holidayClosed.year">
+                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" :class="{ 'border-red-400': errors.year }" id="year" v-model="form.year">
+                    <div v-if="errors.year" class="text-red-500">{{ errors.year }}</div>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-500 font-bold mb-2" for="startWeek">Från och med vecka</label>
-                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" id="startWeek" name="startWeek" :placeholder="holidayClosed.startWeek">
+                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" :class="{ 'border-red-400': errors.startWeek }" id="startWeek" v-model="form.startWeek">
+                    <div v-if="errors.startWeek" class="text-red-500">{{ errors.startWeek }}</div>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-500 font-bold mb-2" for="endWeek">Till och med vecka</label>
-                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" id="endWeek" name="endWeek" :placeholder="holidayClosed.endWeek">
+                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" :class="{ 'border-red-400': errors.endWeek }" id="endWeek" v-model="form.endWeek">
+                    <div v-if="errors.endWeek" class="text-red-500">{{ errors.endWeek }}</div>
                 </div>
                 <div class="flex items-center justify-between">
-                    <input type="submit" value="Ändra" class="btn-add rounded px-5 py-2 focus:outline-none focus:shadow-outline"> 
+                    <button type="submit" class="rounded px-5 py-2 focus:outline-none focus:shadow-outline">Ändra</button>
                 </div>
             </form>
         </div>
@@ -88,17 +92,34 @@
 
 <script>
 import homeLayout from '@/Layouts/HomeLayout.vue'
-import { ref } from '@vue/reactivity'
-import { onUpdated, watch } from '@vue/runtime-core'
+import { reactive, ref } from '@vue/reactivity'
+import { Inertia } from '@inertiajs/inertia'
+
 export default {
-    props: ['holidayClosed'],
+    props: {
+        errors: Object,
+        holidayClosed: Object
+    },
     components: {
         homeLayout
     },
-    setup() {
+    setup(props) {
         const openModal = ref(false)
+        
+        const form = reactive({
+            id: props.holidayClosed.id,
+            year: props.holidayClosed.year,
+            startWeek: props.holidayClosed.startWeek,
+            endWeek: props.holidayClosed.endWeek
+        })
 
-        return { openModal }
+        function submit() {
+            Inertia.post('/', form, {
+                onSuccess: () => openModal.value = false
+            })
+        }
+
+        return { openModal, form, submit }
     }
 }
 </script>
