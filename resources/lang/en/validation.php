@@ -94,11 +94,11 @@ return [
     'multiple_of' => 'The :attribute must be a multiple of :value.',
     'not_in' => 'The selected :attribute is invalid.',
     'not_regex' => 'The :attribute format is invalid.',
-    'numeric' => 'The :attribute must be a number.',
+    'numeric' => ':attribute måste vara ett nummer.',
     'password' => 'The password is incorrect.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    'required' => 'Fältet får inte var tomt.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -138,6 +138,19 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'year' => [
+            'digits' => 'Du måste ange årtal med fyra siffror.'
+        ],
+        'startWeek' => [
+            'digits' => 'Du måste ange en giltlig vecka.',
+            'min' => 'Du måste ange en giltlig vecka.',
+            'max' => 'Du måste ange en giltlig vecka.',
+        ],
+        'endWeek' => [
+            'digits' => 'Du måste ange en giltlig vecka.',
+            'min' => 'Du måste ange en giltlig vecka.',
+            'max' => 'Du måste ange en giltlig vecka.',
+        ]
     ],
 
     /*
@@ -151,6 +164,9 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'startWeek' => 'Första veckan',
+        'endWeek' => 'Sista veckan'
+    ],
 
 ];

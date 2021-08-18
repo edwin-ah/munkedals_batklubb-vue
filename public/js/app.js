@@ -20665,6 +20665,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           'border-red-400': $props.errors.year
         }],
         id: "year",
+        name: "year",
         "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
           return $setup.form.year = $event;
         })
@@ -20678,6 +20679,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           'border-red-400': $props.errors.startWeek
         }],
         id: "startWeek",
+        name: "startWeek",
         "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
           return $setup.form.startWeek = $event;
         })
@@ -20691,6 +20693,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           'border-red-400': $props.errors.endWeek
         }],
         id: "endWeek",
+        name: "endWeek",
         "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
           return $setup.form.endWeek = $event;
         })
