@@ -16,37 +16,6 @@
         </div>
     <div class="wave-holder-bottom h-40"></div>
 
-    <!-- MODAL -->
-    <div v-if="openModal" class="pt-24 h-screen w-screen shadow fixed left-0 top-0 z-10 overflow-auto bg-black bg-opacity-40">
-        <div class="w-full max-w-sm mx-auto">
-            <button @click="openModal = !openModal" class="float-right text-gray-700 text-xl font-bold bg-white mr-4 hover:text-black focus:text-black">
-                <span>&times;</span>
-            </button>
-
-            <form @submit.prevent="submit" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 form-edit-closed">
-                
-                <div class="mb-4">
-                    <label class="block text-gray-500 font-bold mb-2" for="year">Ange år</label>
-                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" :class="{ 'border-red-400': errors.year }" id="year" name="year" v-model="form.year">
-                    <div v-if="errors.year" class="text-red-500">{{ errors.year }}</div>
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-500 font-bold mb-2" for="startWeek">Från och med vecka</label>
-                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" :class="{ 'border-red-400': errors.startWeek }" id="startWeek" name="startWeek" v-model="form.startWeek">
-                    <div v-if="errors.startWeek" class="text-red-500">{{ errors.startWeek }}</div>
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-500 font-bold mb-2" for="endWeek">Till och med vecka</label>
-                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" :class="{ 'border-red-400': errors.endWeek }" id="endWeek" name="endWeek" v-model="form.endWeek">
-                    <div v-if="errors.endWeek" class="text-red-500">{{ errors.endWeek }}</div>
-                </div>
-                <div class="flex items-center justify-between">
-                    <button type="submit" class="rounded px-5 py-2 focus:outline-none focus:shadow-outline">Ändra</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
     <div class="container mx-auto">
         <div class="flex flex-col justify-between md:flex-row">
             <div class="text-center p-5">
@@ -58,7 +27,7 @@
                         styrelsen
                     </inertia-link>
                 </p>
-                <button v-if="$page.props.auth.user" @click="openModal = !openModal" class="rounded bg-green-500 text-white px-5 py-2 shadow hover:bg-green-600 focus:bg-green-600">Ändra</button>
+                <button v-if="$page.props.auth.user" @click="showModal = !showModal" class="rounded bg-green-500 text-white px-5 py-2 shadow hover:bg-green-600 focus:bg-green-600 focus:outline-none">Ändra</button>
             </div>
 
             <div class="text-center p-5">
@@ -85,26 +54,56 @@
                 <a href="#" class="btn-primary text-lg px-5 py-3 rounded-lg shadow-2xl">Fyll i dina båtuppgifter här</a>
             </div>
         </div>
-    </div>    
+    </div>
+
+    <!-- MODAL -->
+    <modal v-if="showModal" @close="showModal = !showModal">
+        <template #modalContent>
+            <form @submit.prevent="submit" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"> 
+                <div class="mb-4">
+                    <label class="block text-gray-500 font-bold mb-2" for="year">Ange år</label>
+                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" :class="{ 'border-red-400': errors.year }" id="year" name="year" v-model="form.year">
+                    <div v-if="errors.year" class="text-red-500">{{ errors.year }}</div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-500 font-bold mb-2" for="startWeek">Från och med vecka</label>
+                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" :class="{ 'border-red-400': errors.startWeek }" id="startWeek" name="startWeek" v-model="form.startWeek">
+                    <div v-if="errors.startWeek" class="text-red-500">{{ errors.startWeek }}</div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-500 font-bold mb-2" for="endWeek">Till och med vecka</label>
+                    <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" :class="{ 'border-red-400': errors.endWeek }" id="endWeek" name="endWeek" v-model="form.endWeek">
+                    <div v-if="errors.endWeek" class="text-red-500">{{ errors.endWeek }}</div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button type="submit" class="rounded bg-green-500 text-white px-5 py-2 shadow hover:bg-green-600 focus:bg-green-600 focus:outline-none">Ändra</button>
+                </div>
+            </form>
+        </template>
+    </modal>
 
     </home-layout>
 </template>
 
 <script>
-import homeLayout from '@/Layouts/HomeLayout.vue'
 import { reactive, ref } from '@vue/reactivity'
 import { Inertia } from '@inertiajs/inertia'
+import homeLayout from '@/Layouts/HomeLayout.vue'
+import modal from '@/Components/Modal.vue'
 
 export default {
+    metaInfo: { title: 'Hem' },
     props: {
         errors: Object,
         holidayClosed: Object
     },
     components: {
-        homeLayout
+        Head,
+        homeLayout,
+        modal
     },
     setup(props) {
-        const openModal = ref(false)
+        const showModal = ref(false)
         
         const form = reactive({
             id: props.holidayClosed.id,
@@ -115,11 +114,11 @@ export default {
 
         function submit() {
             Inertia.post('/', form, {
-                onSuccess: () => openModal.value = false
+                onSuccess: () => showModal.value = false
             })
         }
 
-        return { openModal, form, submit }
+        return { showModal, form, submit }
     }
 }
 </script>
