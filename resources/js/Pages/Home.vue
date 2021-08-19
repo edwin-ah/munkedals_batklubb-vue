@@ -1,4 +1,5 @@
 <template>
+    <app-head title="Hem" />
     <home-layout>
         <div class="bg-main">
             <div class="container mx-auto">
@@ -88,17 +89,17 @@
 <script>
 import { reactive, ref } from '@vue/reactivity'
 import { Inertia } from '@inertiajs/inertia'
+import appHead from '@/Components/AppHead.vue'
 import homeLayout from '@/Layouts/HomeLayout.vue'
 import modal from '@/Components/Modal.vue'
 
 export default {
-    metaInfo: { title: 'Hem' },
     props: {
         errors: Object,
         holidayClosed: Object
     },
     components: {
-        Head,
+        appHead,
         homeLayout,
         modal
     },
