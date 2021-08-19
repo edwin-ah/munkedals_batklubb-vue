@@ -32,6 +32,10 @@ Route::get('/', [HolidayClosedController::class, 'getHolidayClosed'])
 Route::post('/', [HolidayClosedController::class, 'updateHolidayClosed'])
     ->middleware('auth');
 
+Route::get('/hamnområden', function() {
+    return Inertia::render('PortAreas');
+});
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

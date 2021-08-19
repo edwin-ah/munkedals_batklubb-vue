@@ -1,6 +1,5 @@
 <template>
-<!-- TODO => ÄNDRA BACKGROUND KLASS OM ANVÄNDAREN INTE ÄR PÅ INDEX -->
-    <div class="navbar-background h-auto">
+    <div class="h-auto" :class="navBgClass">
         <nav class="py-1">
             <div class="xl:max-w-7xl max-w-full mx-auto sm:px-6 md:px-4 lg:px-2 xl:px-0">
                 <div class="flex justify-between">
@@ -101,7 +100,11 @@ export default {
             return usePage().props.value.auth.user ? 'lg:hidden' : 'md:hidden'
         })
 
-        return { showingNavigationDropdown, navLinksClass, hamburgerClass }
+        const navBgClass = computed(() => {
+            return route().current('home') ? 'navbar-background work-sans' : 'bg-main work-sans'
+        })
+
+        return { showingNavigationDropdown, navLinksClass, hamburgerClass, navBgClass }
     }
 }
 </script>
@@ -111,7 +114,6 @@ export default {
         background: linear-gradient(rgba(95, 95, 95, 0.75), rgba(95, 95, 95, 0.25)), url("/images/web_images/ny-brygga.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        font-family: 'Work Sans', sans-serif;
     }
     
     .mobile-menu {
