@@ -62,6 +62,18 @@
         <template #modalContent>
             <form @submit.prevent="submit" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"> 
                 <div class="mb-4">
+                    <text-input v-model="form.year" :error="errors.year" label="Ange År" inputId="year" inputName="year" type="number" boxModel="w-full py-2 px-4" />
+                </div>
+                <div class="mb-4">
+                    <text-input v-model="form.startWeek" :error="errors.startWeek" label="Från och med vecka" inputId="startWeek" inputName="startWeek" boxModel="w-full py-2 px-4" />
+                </div>
+                <div class="mb-4">
+                    <text-input v-model="form.endWeek" :error="errors.endWeek" label="Till och med vecka" inputId="endWeek" inputName="endWeek" boxModel="w-full py-2 px-4" />
+                </div>
+                <div class="flex items-center justify-between">
+                    <button type="submit" class="rounded bg-green-500 text-white px-5 py-2 shadow hover:bg-green-600 focus:bg-green-600 focus:outline-none">Ändra</button>
+                </div>
+                <!-- <div class="mb-4">
                     <label class="block text-gray-500 font-bold mb-2" for="year">Ange år</label>
                     <input type="number" class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white" :class="{ 'border-red-400': errors.year }" id="year" name="year" v-model="form.year">
                     <div v-if="errors.year" class="text-red-500">{{ errors.year }}</div>
@@ -78,7 +90,7 @@
                 </div>
                 <div class="flex items-center justify-between">
                     <button type="submit" class="rounded bg-green-500 text-white px-5 py-2 shadow hover:bg-green-600 focus:bg-green-600 focus:outline-none">Ändra</button>
-                </div>
+                </div> -->
             </form>
         </template>
     </modal>
@@ -92,6 +104,7 @@ import { Inertia } from '@inertiajs/inertia'
 import appHead from '@/Components/AppHead.vue'
 import homeLayout from '@/Layouts/HomeLayout.vue'
 import modal from '@/Components/Modal.vue'
+import textInput from '@/Components/Input.vue'
 
 export default {
     props: {
@@ -101,7 +114,8 @@ export default {
     components: {
         appHead,
         homeLayout,
-        modal
+        modal,
+        textInput
     },
     setup(props) {
         const showModal = ref(false)
