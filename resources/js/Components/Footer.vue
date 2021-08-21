@@ -26,7 +26,7 @@
                     <div class="flex flex-col">
                         <h3 class="font-bold text-white text-xl uppercase md:mt-0 mt-10 mb-2">Länkar</h3>
                         <span class="my-2"><inertia-link :href="route('portAreas')" class="text-md border-b border-white uppercase font-bold hover:text-gray-800 px-2 rounded-t-lg hover:bg-white focus:bg-white focus:text-gray-800 focus:outline-none transition duration-150 ease-in-out">Hamnområden</inertia-link></span>
-                        <span class="my-2"><a href="{{ route('information') }}" class="text-md border-b border-white uppercase font-bold hover:text-gray-800 px-2 rounded-t-lg hover:bg-white focus:bg-white focus:text-gray-800 focus:outline-none transition duration-150 ease-in-out">Information</a></span>
+                        <span class="my-2"><inertia-link :href="route('information.index')" class="text-md border-b border-white uppercase font-bold hover:text-gray-800 px-2 rounded-t-lg hover:bg-white focus:bg-white focus:text-gray-800 focus:outline-none transition duration-150 ease-in-out">Information</inertia-link></span>
                         <span class="my-2"><a href="#" class="text-md border-b border-white uppercase font-bold hover:text-gray-800 px-2 rounded-t-lg hover:bg-white focus:bg-white focus:text-gray-800 focus:outline-none transition duration-150 ease-in-out">Om oss</a></span>
                     </div>
                 </div>

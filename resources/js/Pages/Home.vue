@@ -35,10 +35,10 @@
                 <h2 class="text-xl text-gray-900 font-semibold md:text-2xl">Mer information om oss?</h2>
                 <ul>
                     <li>
-                        <a href="#" class="text-blue-900 text-lg md:text-xl rounded hover:underline hover:text-blue-darker focus:underline">Våra hamnområden</a>
+                        <inertia-link :href="route('portAreas')" class="text-blue-900 text-lg md:text-xl rounded hover:underline hover:text-blue-darker focus:underline">Våra hamnområden</inertia-link>
                     </li>
                     <li>
-                        <a href="#" class="text-blue-900 text-lg md:text-xl rounded hover:underline hover:text-blue-darker focus:underline">Informationsblad</a>
+                        <inertia-link :href="route('information.index')" class="text-blue-900 text-lg md:text-xl rounded hover:underline hover:text-blue-darker focus:underline">Informationsblad</inertia-link>
                     </li>
                     <li>
                         <a href="#" class="text-blue-900 text-lg md:text-xl rounded hover:underline hover:text-blue-darker focus:underline">Avgifter</a>

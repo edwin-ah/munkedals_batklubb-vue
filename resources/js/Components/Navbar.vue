@@ -18,7 +18,7 @@
                         <nav-link :href="route('portAreas')" :active="route().current('portAreas')"> 
                             Hamnområden
                         </nav-link>
-                        <nav-link :href="route('home')" :active="route().current('byt')"> 
+                        <nav-link :href="route('information.index')" :active="route().current('information.index')"> 
                             Information
                         </nav-link>
                         <nav-link :href="route('home')" :active="route().current('byt')"> 
@@ -53,7 +53,7 @@
                 <responsive-nav-link :href="route('portAreas')" :active="route().current('portAreas')"> 
                     Hamnområden
                 </responsive-nav-link>
-                <responsive-nav-link :href="route('home')" :active="route().current('byt')"> 
+                <responsive-nav-link :href="route('information.index')" :active="route().current('byt')"> 
                     Information
                 </responsive-nav-link>
                 <responsive-nav-link :href="route('home')" :active="route().current('byt')"> 

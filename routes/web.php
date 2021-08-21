@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HolidayClosedController;
+use App\Http\Controllers\InformationSheetController;
 use App\Models\HolidayClosed;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -36,6 +37,8 @@ Route::get('/hamnomraden', function() {
     return Inertia::render('PortAreas');
 })->name('portAreas');
 
+Route::get('/information', [InformationSheetController::class, 'index'])
+    ->name('information.index');
 
 
 

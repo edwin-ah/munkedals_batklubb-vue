@@ -30,3 +30,7 @@
   background-color: rgb(32, 32, 48);
   border-color: var(--main);
 }
+
+.border-main {
+  border-color: var(--main);
+}
