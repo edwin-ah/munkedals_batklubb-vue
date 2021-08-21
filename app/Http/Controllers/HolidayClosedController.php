@@ -33,4 +33,8 @@ class HolidayClosedController extends Controller
 
         return Redirect::route('home');
     }
+
+    public function test() {
+        return Inertia::render('PortAreas');
+    }
 }

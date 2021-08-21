@@ -3,7 +3,7 @@
     <template #jumbotronStart>
       <div class="wave-holder-top h-40 flex">
           <div class="container mx-auto align-text-bottom text-center">
-            <h1 class="lg:text-4xl text-2xl text-white mb-5 font-bold">Välkommen Till Munkedals Båtklubb</h1>
+            <h1 class="lg:text-4xl md:text-2xl text-xl text-white mb-5 font-bold">Välkommen Till Munkedals Båtklubb</h1>
           </div>
       </div>  
     </template>

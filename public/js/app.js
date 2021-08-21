@@ -18829,15 +18829,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Components_AppHead_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Components/AppHead.vue */ "./resources/js/Components/AppHead.vue");
-/* harmony import */ var _Layouts_MainLayout_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Layouts/MainLayout.vue */ "./resources/js/Layouts/MainLayout.vue");
+/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var _Components_AppHead_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Components/AppHead.vue */ "./resources/js/Components/AppHead.vue");
+/* harmony import */ var _Layouts_MainLayout_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Layouts/MainLayout.vue */ "./resources/js/Layouts/MainLayout.vue");
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    AppHead: _Components_AppHead_vue__WEBPACK_IMPORTED_MODULE_0__.default,
-    MainLayout: _Layouts_MainLayout_vue__WEBPACK_IMPORTED_MODULE_1__.default
-  }
+    AppHead: _Components_AppHead_vue__WEBPACK_IMPORTED_MODULE_1__.default,
+    MainLayout: _Layouts_MainLayout_vue__WEBPACK_IMPORTED_MODULE_2__.default
+  },
+  setup: function setup() {}
 });
 
 /***/ }),
@@ -19066,9 +19069,43 @@ var _hoisted_5 = {
   "class": "flex md:flex-col justify-center"
 };
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex flex-col\"><h3 class=\"font-bold text-white text-xl uppercase mb-2\">Kontakta oss</h3><span class=\"mt-2\"><p>Telefon</p></span><span class=\"mb-2\"><p>0524 12333</p></span><span class=\"mt-2\"><p>Mobil</p></span><span class=\"mb-2\"><p>070 6226674</p></span><span class=\"mt-2\"><p>E-post</p></span><span class=\"mb-2\"><p>munkedals.batklubb@telia.com</p></span></div><div class=\"flex flex-col\"><h3 class=\"font-bold text-white text-xl uppercase md:mt-0 mt-10 mb-2\">Adress</h3><span class=\"my-1\"><p>Ellingeröd 22</p></span><span class=\"my-1\"><p>455 92 Munkedal</p></span></div><div class=\"flex flex-col\"><h3 class=\"font-bold text-white text-xl uppercase md:mt-0 mt-10 mb-2\">Länkar</h3><span class=\"my-2\"><a href=\"{{ route(&#39;portAreas&#39;) }}\" class=\"text-md border-b border-white uppercase font-bold hover:text-gray-800 px-2 rounded-t-lg hover:bg-white focus:bg-white focus:text-gray-800 focus:outline-none transition duration-150 ease-in-out\">Hamnområden</a></span><span class=\"my-2\"><a href=\"{{ route(&#39;information&#39;) }}\" class=\"text-md border-b border-white uppercase font-bold hover:text-gray-800 px-2 rounded-t-lg hover:bg-white focus:bg-white focus:text-gray-800 focus:outline-none transition duration-150 ease-in-out\">Information</a></span><span class=\"my-2\"><a href=\"#\" class=\"text-md border-b border-white uppercase font-bold hover:text-gray-800 px-2 rounded-t-lg hover:bg-white focus:bg-white focus:text-gray-800 focus:outline-none transition duration-150 ease-in-out\">Om oss</a></span></div>", 3);
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex flex-col\"><h3 class=\"font-bold text-white text-xl uppercase mb-2\">Kontakta oss</h3><span class=\"mt-2\"><p>Telefon</p></span><span class=\"mb-2\"><p>0524 12333</p></span><span class=\"mt-2\"><p>Mobil</p></span><span class=\"mb-2\"><p>070 6226674</p></span><span class=\"mt-2\"><p>E-post</p></span><span class=\"mb-2\"><p>munkedals.batklubb@telia.com</p></span></div><div class=\"flex flex-col\"><h3 class=\"font-bold text-white text-xl uppercase md:mt-0 mt-10 mb-2\">Adress</h3><span class=\"my-1\"><p>Ellingeröd 22</p></span><span class=\"my-1\"><p>455 92 Munkedal</p></span></div>", 2);
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_8 = {
+  "class": "flex flex-col"
+};
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h3", {
+  "class": "font-bold text-white text-xl uppercase md:mt-0 mt-10 mb-2"
+}, "Länkar", -1
+/* HOISTED */
+);
+
+var _hoisted_10 = {
+  "class": "my-2"
+};
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Hamnområden");
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
+  "class": "my-2"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
+  href: "{{ route('information') }}",
+  "class": "text-md border-b border-white uppercase font-bold hover:text-gray-800 px-2 rounded-t-lg hover:bg-white focus:bg-white focus:text-gray-800 focus:outline-none transition duration-150 ease-in-out"
+}, "Information")], -1
+/* HOISTED */
+);
+
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
+  "class": "my-2"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
+  href: "#",
+  "class": "text-md border-b border-white uppercase font-bold hover:text-gray-800 px-2 rounded-t-lg hover:bg-white focus:bg-white focus:text-gray-800 focus:outline-none transition duration-150 ease-in-out"
+}, "Om oss")], -1
+/* HOISTED */
+);
+
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "container mx-auto px-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "mt-16 border-t-2 border-white flex flex-col items-center"
@@ -19099,7 +19136,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href"])]), _hoisted_6])]), _hoisted_9])]);
+  , ["href"])]), _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: _ctx.route('portAreas'),
+    "class": "text-md border-b border-white uppercase font-bold hover:text-gray-800 px-2 rounded-t-lg hover:bg-white focus:bg-white focus:text-gray-800 focus:outline-none transition duration-150 ease-in-out"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_11];
+    }),
+    _: 1
+    /* STABLE */
+
+  }, 8
+  /* PROPS */
+  , ["href"])]), _hoisted_12, _hoisted_13])])]), _hoisted_14])]);
 }
 
 /***/ }),
@@ -19384,8 +19433,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8
   /* PROPS */
   , ["href", "active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_nav_link, {
-    href: _ctx.route('home'),
-    active: _ctx.route().current('byt')
+    href: _ctx.route('portAreas'),
+    active: _ctx.route().current('portAreas')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_7];
@@ -19496,8 +19545,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8
   /* PROPS */
   , ["href", "active"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_responsive_nav_link, {
-    href: _ctx.route('home'),
-    active: _ctx.route().current('byt')
+    href: _ctx.route('portAreas'),
+    active: _ctx.route().current('portAreas')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_15];
@@ -19927,7 +19976,7 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "container mx-auto align-text-bottom text-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
-  "class": "lg:text-4xl text-2xl text-white mb-5 font-bold"
+  "class": "lg:text-4xl md:text-2xl text-xl text-white mb-5 font-bold"
 }, "Välkommen Till Munkedals Båtklubb")])], -1
 /* HOISTED */
 );
@@ -20822,7 +20871,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
         href: _ctx.route('home'),
-        "class": "px-10 py-2 rounded bg-blue-500 md:ml-10 hover:bg-blue-600 focus:bg-blue-600"
+        "class": "px-10 my-5 py-2 rounded bg-blue-500 md:my-0 md:ml-10 hover:bg-blue-600 focus:bg-blue-600"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
           return [_hoisted_5];
@@ -20940,6 +20989,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "container mx-auto mt-5"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
+  "class": "text-center text-4xl font-semibold text-main work-sans"
+}, "Hamnområden"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": ""
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
+  "class": "text-center text-black"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Munkedals Båtklubb har två hamnområden, "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
+  href: "#saltkallan",
+  "class": "underline text-main font-semibold"
+}, "Saltkällan"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(", som är vår största båthamn, samt "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
+  href: "#ellingerod",
+  "class": "underline text-main font-semibold"
+}, "Ellingeröd"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(", där vi har klubbstuga, båtplatser, kran och uppläggning.")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "mt-10 pt-8 bg-white rounded shadow-xl"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
+  id: "saltkallan",
+  "class": "text-center font-semibold text-main text-4xl uppercase work-sans"
+}, "Saltkällan"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "flex md:flex-row justify-between flex-col py-3 md:py-8"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "md:w-6/12 sm:mb-5 lg:px-20 px-10 flex flex-col justify-center"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " Saltkällan är vår största båthamn och finns längst in i Saltkällefjorden. Här har vi sex stycken flytbryggor med totalt 184 båtplatser. "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " Här finns en vaktstuga för oss båtägare, då vi hela den aktiva båtsäsongen går vakt. "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " Det finns en bra sjösättningsramp För nyttjande av den krävs medlemskap och elektronisknyckel som köps till självkostnadspris. ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "md:w-6/12 flex "
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  "class": "rounded border shadow max-h-96",
+  src: "images/web_images/ny-brygga.jpg",
+  alt: ""
+})])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "flex flex-row invisible md:visible"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  "class": "object-contain rounded px-5",
+  src: "images/web_images/saltkallan1.jpg",
+  alt: ""
+})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  "class": "object-contain rounded px-5",
+  src: "images/web_images/saltkallan2.jpg",
+  alt: ""
+})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  "class": "object-contain rounded px-5",
+  src: "images/web_images/saltkallan3.jpg",
+  alt: ""
+})])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "text-center md:mt-8"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
+  "class": "font-bold work-sans"
+}, "Hamnkapten Leif Karlsson"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, "När det gäller båtplatser, vaktnätter kontakta Kansliet 0524-12333 eller 070-6226674")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", {
+  id: "ellingerod",
+  "class": "text-center font-semibold text-main text-4xl uppercase work-sans mt-10 pt-10 border-t-2"
+}, "Elllingeröd"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "flex md:flex-row justify-between flex-col py-3 md:py-8"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "md:w-6/12 sm:mb-5 lg:px-20 px-10 flex flex-col justify-center"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " Ellingeröd är där vi har klubbstuga, båtplatser, kran och uppläggning. Ellingeröd har liksom Åtorp ett väl skyddat läge i Örekilsälven. "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h2", {
+  "class": "font-semibold"
+}, "Här har vi 63 båtplatser fördelat på"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, "18 st. 2,2m bredd"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, "6 st. 2,5m bredd"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, "16 st. 3,0m bredd"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, "20 st. 3,5m bredd"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, "3 st. 4,0m bredd")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h2", {
+  "class": "font-semibold"
+}, "Uppläggning"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, "Vi har 80 st. båthus"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, "cirka 60 st. friliggare"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, "Det finns eluttag med god täckning"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, "Den frostfria delen av året har vi även vattenposter på några platser")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "md:w-6/12 flex "
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  "class": "rounded border shadow max-h-96",
+  src: "images/web_images/ellingerod.jpg",
+  alt: ""
+})])])])], -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_app_head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("app-head");
 
@@ -20947,7 +21065,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_app_head, {
     title: "Hamnområden"
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_main_layout)], 64
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_main_layout, null, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_1];
+    }),
+    _: 1
+    /* STABLE */
+
+  })], 64
   /* STABLE_FRAGMENT */
   );
 }

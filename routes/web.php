@@ -32,10 +32,14 @@ Route::get('/', [HolidayClosedController::class, 'getHolidayClosed'])
 Route::post('/', [HolidayClosedController::class, 'updateHolidayClosed'])
     ->middleware('auth');
 
-Route::get('/hamnområden', function() {
+Route::get('/hamnomraden', function() {
     return Inertia::render('PortAreas');
-});
+})->name('portAreas');
 
+
+
+
+// SCAFFOLDING
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

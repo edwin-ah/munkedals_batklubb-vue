@@ -9,7 +9,7 @@
                         <br><br>
                         Vi bedriver vinterförvaring av både segel, motorbåtar och trailer-båtar. Klubbområdet omfattar en yta av ca. 17000 m2 med egen hamn och erbjuder vinterförvaring av förnärvarande ca 300 stycken båtar.  Klubben tillhandahåller service till medlemmarna i form av..
                     </p>
-                    <inertia-link :href="route('home')" class="px-10 py-2 rounded bg-blue-500 md:ml-10 hover:bg-blue-600 focus:bg-blue-600">
+                    <inertia-link :href="route('home')" class="px-10 my-5 py-2 rounded bg-blue-500 md:my-0 md:ml-10 hover:bg-blue-600 focus:bg-blue-600">
                         Läs mer om oss
                     </inertia-link>
                 </div>
