@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\InformationSheet;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class InformationSheetFactory extends Factory
 {
@@ -12,7 +13,7 @@ class InformationSheetFactory extends Factory
      *
      * @var string
      */
-    protected $model = InformationSheet::class;
+    protected $model = \App\Models\InformationSheet::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +23,9 @@ class InformationSheetFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->title(),
+            'pdfName' => 'pdf-test.pdf',
+            'created_at' => now()
         ];
     }
 }
