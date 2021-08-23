@@ -18227,7 +18227,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['href', 'active'],
   computed: {
     classes: function classes() {
-      return this.active ? 'inline-flex items-center px-1 pt-1 border-b-2 border-white text-sm font-medium leading-5 text-gray-900 focus:outline-none transition duration-150 ease-in-out' : 'inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-white hover:text-gray-800 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:border-gray-300 transition duration-150 ease-in-out';
+      return this.active ? 'inline-flex items-center px-1 pt-1 border-b-2 border-white text-sm font-medium leading-5 text-white transition duration-150 ease-in-out' : 'inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-white hover:text-gray-300 hover:border-gray-300 focus:text-gray-300 focus:border-gray-300 transition duration-150 ease-in-out';
     }
   }
 });
@@ -18300,7 +18300,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['active'],
   computed: {
     classes: function classes() {
-      return this.active ? 'block pl-3 pr-4 py-2 border-l-4 border-white text-base font-medium text-white bg-gray-700 focus:outline-none focus:text-black focus:bg-indigo-50 focus:border-blue-500 transition duration-150 ease-in-out' : 'block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white hover:text-gray-800 hover:bg-gray-200 hover:border-gray-500 focus:outline-none focus:text-gray-800 focus:bg-gray-300 focus:border-gray-300 transition duration-150 ease-in-out';
+      return this.active ? 'block pl-3 pr-4 py-2 border-l-4 border-white text-base font-medium text-white bg-transparent transition duration-150 ease-in-out' : 'block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-white bg-transparent hover:text-gray-300 hover:border-gray-300 focus:text-gray-300 focus:border-gray-300 transition duration-150 ease-in-out';
     }
   }
 });
@@ -19563,7 +19563,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[1] || (_cache[1] = function ($event) {
       return $setup.showingNavigationDropdown = !$setup.showingNavigationDropdown;
     }),
-    "class": "inline-flex items-center justify-center p-2 rounded-md text-gray-400 bg-gray-700 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+    "class": "inline-flex items-center justify-center p-2 rounded-md text-gray-500 bg-gray-100 hover:text-gray-500 hover:bg-gray-300 focus:outline-none focus:bg-gray-300 focus:text-gray-700 transition duration-150 ease-in-out"
   }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("svg", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("path", {
     "class": {
       'hidden': $setup.showingNavigationDropdown,
@@ -19592,7 +19592,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": [{
       'block': $setup.showingNavigationDropdown,
       'hidden': !$setup.showingNavigationDropdown
-    }, "mobile-menu"]
+    }, _ctx.route().current('home') ? 'mobile-menu-background' : 'bg-main']
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_responsive_nav_link, {
     href: _ctx.route('home'),
     active: _ctx.route().current('home')
@@ -21674,7 +21674,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.navbar-background {\r\n        background: linear-gradient(rgba(95, 95, 95, 0.75), rgba(95, 95, 95, 0.25)), url(\"/images/web_images/ny-brygga.jpg\");\r\n        background-size: cover;\r\n        background-repeat: no-repeat;\n}\n.mobile-menu {\r\n        background: linear-gradient(rgba(48, 48, 48, 0.8), rgba(48, 48, 48, 0.8));\n}\n@media only screen and (min-width: 768px) {\n.navbar-background { \r\n        background: linear-gradient(rgba(39, 39, 39, 0.75), rgba(39, 39, 39, 0.25)), url(\"/images/web_images/ny-brygga-lg.jpg\");\r\n        background-size: cover;\r\n        background-repeat: no-repeat;\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.navbar-background {\r\n        background: linear-gradient(rgba(95, 95, 95, 0.75), rgba(95, 95, 95, 0.25)), url(\"/images/web_images/ny-brygga.jpg\");\r\n        background-size: cover;\r\n        background-repeat: no-repeat;\n}\n.mobile-menu-background {\r\n        background: linear-gradient(rgba(48, 48, 48, 0.8), rgba(48, 48, 48, 0.8));\n}\n@media only screen and (min-width: 768px) {\n.navbar-background { \r\n        background: linear-gradient(rgba(39, 39, 39, 0.75), rgba(39, 39, 39, 0.25)), url(\"/images/web_images/ny-brygga-lg.jpg\");\r\n        background-size: cover;\r\n        background-repeat: no-repeat;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
