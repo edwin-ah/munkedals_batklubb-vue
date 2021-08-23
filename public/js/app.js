@@ -18543,10 +18543,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Components_Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Components/Button */ "./resources/js/Components/Button.vue");
 /* harmony import */ var _Layouts_Guest__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Layouts/Guest */ "./resources/js/Layouts/Guest.vue");
-/* harmony import */ var _Components_Input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Components/Input */ "./resources/js/Components/Input.vue");
+/* harmony import */ var _Components_Input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Components/Input.vue */ "./resources/js/Components/Input.vue");
 /* harmony import */ var _Components_Checkbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Components/Checkbox */ "./resources/js/Components/Checkbox.vue");
 /* harmony import */ var _Components_Label__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Components/Label */ "./resources/js/Components/Label.vue");
 /* harmony import */ var _Components_ValidationErrors__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Components/ValidationErrors */ "./resources/js/Components/ValidationErrors.vue");
+
 
 
 
@@ -18560,7 +18561,8 @@ __webpack_require__.r(__webpack_exports__);
     BreezeInput: _Components_Input__WEBPACK_IMPORTED_MODULE_2__.default,
     BreezeCheckbox: _Components_Checkbox__WEBPACK_IMPORTED_MODULE_3__.default,
     BreezeLabel: _Components_Label__WEBPACK_IMPORTED_MODULE_4__.default,
-    BreezeValidationErrors: _Components_ValidationErrors__WEBPACK_IMPORTED_MODULE_5__.default
+    BreezeValidationErrors: _Components_ValidationErrors__WEBPACK_IMPORTED_MODULE_5__.default,
+    TextInput: _Components_Input__WEBPACK_IMPORTED_MODULE_2__.default
   },
   props: {
     canResetPassword: Boolean,
@@ -20270,35 +20272,30 @@ var _hoisted_1 = {
   "class": "mb-4 font-medium text-sm text-green-600"
 };
 var _hoisted_2 = {
-  "class": "mt-4"
-};
-var _hoisted_3 = {
   "class": "block mt-4"
 };
-var _hoisted_4 = {
+var _hoisted_3 = {
   "class": "flex items-center"
 };
 
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
   "class": "ml-2 text-sm text-gray-600"
-}, "Remember me", -1
+}, "Kom ihåg mig på den här enheten", -1
 /* HOISTED */
 );
 
-var _hoisted_6 = {
+var _hoisted_5 = {
   "class": "flex items-center justify-end mt-4"
 };
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Forgot your password? ");
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Glömt lösenord? ");
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Log in ");
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Logga in ");
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_breeze_validation_errors = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("breeze-validation-errors");
 
-  var _component_breeze_label = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("breeze-label");
-
-  var _component_breeze_input = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("breeze-input");
+  var _component_text_input = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("text-input");
 
   var _component_breeze_checkbox = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("breeze-checkbox");
 
@@ -20314,38 +20311,32 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onSubmit: _cache[4] || (_cache[4] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.submit && $options.submit.apply($options, arguments);
     }, ["prevent"]))
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_label, {
-    "for": "email",
-    value: "Email"
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_input, {
-    id: "email",
-    type: "email",
-    "class": "mt-1 block w-full",
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_text_input, {
+    inputId: "email",
     modelValue: $data.form.email,
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $data.form.email = $event;
     }),
+    label: "E-post",
+    boxModel: "w-full py-2 px-4",
     required: "",
-    autofocus: "",
-    autocomplete: "username"
+    autofocus: ""
   }, null, 8
   /* PROPS */
-  , ["modelValue"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_label, {
-    "for": "password",
-    value: "Password"
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_input, {
-    id: "password",
-    type: "password",
-    "class": "mt-1 block w-full",
+  , ["modelValue"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_text_input, {
+    inputId: "password",
     modelValue: $data.form.password,
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $data.form.password = $event;
     }),
+    type: "password",
+    label: "Lösenord",
+    boxModel: "w-full py-2 px-4",
     required: "",
-    autocomplete: "current-password"
+    autofocus: ""
   }, null, 8
   /* PROPS */
-  , ["modelValue"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_checkbox, {
+  , ["modelValue"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div>\n            <breeze-label for=\"email\" value=\"Email\" />\n            <breeze-input id=\"email\" type=\"email\" class=\"mt-1 block w-full\" v-model=\"form.email\" required autofocus autocomplete=\"username\" />\n        </div>\n\n        <div class=\"mt-4\">\n            <breeze-label for=\"password\" value=\"Password\" />\n            <breeze-input id=\"password\" type=\"password\" class=\"mt-1 block w-full\" v-model=\"form.password\" required autocomplete=\"current-password\" />\n        </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_checkbox, {
     name: "remember",
     checked: $data.form.remember,
     "onUpdate:checked": _cache[3] || (_cache[3] = function ($event) {
@@ -20353,13 +20344,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 8
   /* PROPS */
-  , ["checked"]), _hoisted_5])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_6, [$props.canResetPassword ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_inertia_link, {
+  , ["checked"]), _hoisted_4])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [$props.canResetPassword ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_inertia_link, {
     key: 0,
     href: _ctx.route('password.request'),
     "class": "underline text-sm text-gray-600 hover:text-gray-900"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_7];
+      return [_hoisted_6];
     }),
     _: 1
     /* STABLE */
@@ -20373,7 +20364,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     disabled: $data.form.processing
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_8];
+      return [_hoisted_7];
     }),
     _: 1
     /* STABLE */

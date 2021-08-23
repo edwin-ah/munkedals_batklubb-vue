@@ -7,6 +7,12 @@
 
     <form @submit.prevent="submit">
         <div>
+            <text-input inputId="email" v-model="form.email" label="E-post" boxModel="w-full py-2 px-4" required autofocus />
+        </div>
+        <div>
+            <text-input inputId="password" v-model="form.password" type="password" label="Lösenord" boxModel="w-full py-2 px-4" required autofocus />
+        </div>
+        <!-- <div>
             <breeze-label for="email" value="Email" />
             <breeze-input id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autofocus autocomplete="username" />
         </div>
@@ -14,22 +20,22 @@
         <div class="mt-4">
             <breeze-label for="password" value="Password" />
             <breeze-input id="password" type="password" class="mt-1 block w-full" v-model="form.password" required autocomplete="current-password" />
-        </div>
+        </div> -->
 
         <div class="block mt-4">
             <label class="flex items-center">
                 <breeze-checkbox name="remember" v-model:checked="form.remember" />
-                <span class="ml-2 text-sm text-gray-600">Remember me</span>
+                <span class="ml-2 text-sm text-gray-600">Kom ihåg mig på den här enheten</span>
             </label>
         </div>
 
         <div class="flex items-center justify-end mt-4">
             <inertia-link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm text-gray-600 hover:text-gray-900">
-                Forgot your password?
+                Glömt lösenord?
             </inertia-link>
 
             <breeze-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                Log in
+                Logga in
             </breeze-button>
         </div>
     </form>
@@ -42,6 +48,7 @@
     import BreezeCheckbox from '@/Components/Checkbox'
     import BreezeLabel from '@/Components/Label'
     import BreezeValidationErrors from '@/Components/ValidationErrors'
+    import TextInput from '@/Components/Input.vue'
 
     export default {
         layout: BreezeGuestLayout,
@@ -51,7 +58,8 @@
             BreezeInput,
             BreezeCheckbox,
             BreezeLabel,
-            BreezeValidationErrors
+            BreezeValidationErrors,
+            TextInput
         },
 
         props: {
